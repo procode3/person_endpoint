@@ -9,7 +9,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.get('/api', async(req, res) => {
     const users = await prisma.user.findMany();
-    res.send({users})
+    res.send(users)
   })
   
 app.post('/api', async(req, res) => {
